@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Media Section</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 style="text-align: center;">Media Section</h1>
+
+    <div style="text-align:center; margin-top: 30px;border: 1px solid black; padding: 10px">
+        <button onclick="playPause()">Play/Pause</button>
+        <button onclick="makeBig()">Big</button>
+        <button onclick="makeSmall()">Small</button>
+        <button onclick="makeNormal()">Normal</button>
+        <br><br>
+        <video id="video1" width="500px">
+            <source src="../HTML_TUTORIAL/Images/video.mp4" type="video/mp4">
+            <source src="../HTML_TUTORIAL/Images/video.mp4" type="video/ogg">
+            Your browser does not support HTML video.
+        </video>
+    </div>
+
+    <div style="margin-top: 30px;text-align:center; ">
+        <audio controls autoplay muted>
+            <source src="../HTML_TUTORIAL/Images/audio.mp3" type="audio/ogg">
+            <source src="../HTML_TUTORIAL/Images/audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <embed width="100%" height="auto" src="../HTML_TUTORIAL/EmbeddedFile/index.html">
+
+        <iframe width="100%" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+        </iframe>
+    </div>
+
+    <div style="margin-top: 30px;">
+        <header>
+            <h1> Visit Different Sites..</h1>
+            <nav>
+                <ul>
+                    <li><a href="../HTML_TUTORIAL/index.html">HTML Home</a></li>
+                    <li><a href="../HTML_TUTORIAL/form.html">HTML Form Screen</a></li>
+                    <li><a href="../HTML_TUTORIAL/graphics.html">HTML Graphics</a></li>
+                    <li><a href="../HTML_TUTORIAL/media.html">HTML Media</a></li>
+                    <li><a href="../HTML_TUTORIAL/apis.html">HTML APIs</a></li>
+                    <li><a href="#">HTML Examples</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+
+
+    <script>
+        var myVideo = document.getElementById("video1");
+
+        function playPause() {
+            if (myVideo.paused)
+                myVideo.play();
+            else
+                myVideo.pause();
+        }
+
+        function makeBig() {
+            myVideo.width = 560;
+        }
+
+        function makeSmall() {
+            myVideo.width = 320;
+        }
+
+        function makeNormal() {
+            myVideo.width = 420;
+        } 
+    </script>
+
+
+</body>
+
+</html>

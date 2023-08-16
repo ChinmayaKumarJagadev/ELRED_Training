@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Training</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="icon" type="image/x-icon" href="../HTML_TUTORIAL//Images/fav_icon.png">
+</head>
+
+<body>
+    <div>
+        <h1 style="text-align: center;">A Form Creation and Manage</h1>
+        <div class="container">
+            <h1>Sample Form</h1>
+            <form id="myForm" action="/action_page.php" target="_blank" method="get" autocomplete="off">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+
+                <label>Gender:</label>
+                <div class="horizontal-group">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </div>
+
+                <label>Hobbies:</label>
+                <div class="horizontal-group">
+                    <input type="checkbox" id="reading" name="hobbies[]" value="reading">
+                    <label for="reading">Reading</label>
+                    <input type="checkbox" id="traveling" name="hobbies[]" value="traveling">
+                    <label for="traveling">Traveling</label>
+                    <input type="checkbox" id="sports" name="hobbies[]" value="sports">
+                    <label for="sports">Sports</label>
+                </div>
+
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">UK</option>
+                </select>
+
+                <label for="birthdate">Birthdate:</label>
+                <input type="date" id="birthdate" name="birthdate">
+
+                <label for="profilePicture">Profile Picture:</label>
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*"
+                    onchange="previewImage(event)">
+                <div id="image-preview"></div>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const form = document.getElementById('myForm');
+    
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+    
+                    const formData = {
+                        name: form.name.value,
+                        email: form.email.value,
+                        password: form.password.value,
+                        gender: form.gender.value,
+                        hobbies: Array.from(form.querySelectorAll('input[name="hobbies[]"]:checked')).map(hobby => hobby.value),
+                        country: form.country.value,
+                        birthdate: form.birthdate.value,
+                        image: form.profilePicture.value,
+                        message: form.message.value
+                    };
+    
+                    console.log(formData);
+                });
+            });
+        </script>
+
+        <div style="margin-top: 30px;">
+            <header>
+                <h1> Visit Different Sites..</h1>
+                <nav>
+                    <ul>
+                        <li><a href="../HTML_TUTORIAL/index.html">HTML Home</a></li>
+                        <li><a href="../HTML_TUTORIAL/form.html">HTML Form Screen</a></li>
+                        <li><a href="../HTML_TUTORIAL/graphics.html">HTML Graphics</a></li>
+                        <li><a href="../HTML_TUTORIAL/media.html">HTML Media</a></li>
+                        <li><a href="#">HTML APIs</a></li>
+                        <li><a href="#">HTML Examples</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+    </div>
+</body>
+
+</html>
