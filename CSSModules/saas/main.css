@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  padding-top: 20px;
+}
+
+.logo {
+  text-align: center;
+  font-size: 24px;
+  padding: 10px;
+  border-bottom: 1px solid #555;
+  margin-bottom: 20px;
+}
+
+.menubarSaas {
+  list-style: none;
+  padding: 0;
+}
+
+.menubarSaas li {
+  margin-bottom: 10px;
+}
+
+.menubarSaas a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.menubarSaas a:hover {
+  background-color: #555;
+}
+
+.content {
+  margin: 20px;
+  width: calc(100% - 250px);
+}
+
+.saasmain {
+  border: 2px solid lightgreen;
+  padding: 20px;
+  color: hsl(0, 30%, 50%);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+
+.danger {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
+  border: 1px solid #333;
+  padding: 20px;
+  background-color: lightgreen;
+}
+
+.button-basic, .button-submit, .button-report {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px 0 20px 0;
+}
+
+.button-report {
+  background-color: red;
+}
+
+.button-submit {
+  background-color: green;
+  color: white;
+}
+
+body,
+h1,
+h2,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  padding: 20px 0 20px 0;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.project-list,
+.task-list {
+  flex-basis: 48%;
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.project-list h2,
+.task-list h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project-list ul,
+.task-list ul {
+  list-style: none;
+}
+
+.project-list ul li,
+.task-list ul li {
+  margin-bottom: 5px;
+}
+
+.project-list ul li a,
+.task-list ul li a {
+  text-decoration: none;
+  color: green;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+}/*# sourceMappingURL=main.css.map */

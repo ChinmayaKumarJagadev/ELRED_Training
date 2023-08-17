@@ -1,0 +1,157 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    padding-top: 20px;
+}
+
+.logo {
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+    margin-bottom: 20px;
+}
+
+.menubargrid {
+    list-style: none;
+    padding: 0;
+}
+
+.menubargrid li {
+    margin-bottom: 10px;
+}
+
+.menubargrid a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.menubargrid a:hover {
+    background-color: #555;
+}
+
+.content {
+    flex-grow: 1;
+    margin: 20px;
+}
+
+.grid-container {
+    display: grid;
+    height: 400px;
+    align-content: center;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    background-color: lightgreen;
+    padding: 10px;
+}
+
+.grid-container>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.grid-container2 {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.grid-container2>div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.item8 {
+    grid-area: 2 / 1 / span 2 / span 3;
+}
+
+
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 200px auto;
+    grid-template-areas:
+        "header  header"
+        "sidebar content"
+        "footer  footer";
+    background-color: #fff;
+    color: #444;
+}
+
+.sidebargrid {
+    grid-area: sidebar;
+    width: 100%;
+    background-color: lightgreen;
+}
+
+.content {
+    grid-area: content;
+    position: relative;
+}
+
+.header {
+    padding: 20px;
+    grid-area: header;
+}
+
+.footer {
+    padding: 20px;
+    grid-area: footer;
+}
+
+.boxGrid {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 50px;
+    font-size: 150%;
+}
+
+.header,
+.footer {
+    background-color: #999;
+}
+
+.topleft {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.topright {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.bottomleft {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.bottomright {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

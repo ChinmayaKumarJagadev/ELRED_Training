@@ -1,3 +1,8 @@
+:root {
+    --green: lightgreen;
+    --white: #ffffff;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -56,8 +61,8 @@ body {
 }
 
 .boxShadow {
-    box-shadow: 0px 0px 15px lightgreen;
-    border: 5px solid lightgreen;
+    box-shadow: 0px 0px 15px var(--green);
+    border: 5px solid var(--green);
     padding: 15px;
 }
 
@@ -66,40 +71,219 @@ body {
     background-color: red;
     background-image: linear-gradient(red 10%, green 85%, blue 90%);
 }
-.conic{
+
+.conic {
     background-image: conic-gradient(from 90deg, pink, yellow, green);
     height: 200px;
     width: 200px;
-    background-color: red; 
+    background-color: red;
     border-radius: 50%;
     padding: 50px;
     text-shadow: 2px 0px;
 }
-.transformBox{
+
+.transformBox {
     width: 300px;
     height: 100px;
-    background-color: lightgreen;
+    background-color: var(--green);
     border: 1px solid black;
 }
 
-#transformRotate{
+#transformRotate {
     width: 300px;
     height: 100px;
-    background-color: lightgreen;
+    background-color: var(--green);
     border: 1px solid black;
     transform: rotate(20deg);
 }
-.transformBox3D{
+
+.transformBox3D {
     width: 300px;
     height: 100px;
-    background-color: lightgreen;
+    background-color: var(--green);
     border: 1px solid black;
 }
 
-#transformRotate3D{
+#transformRotate3D {
     width: 300px;
     height: 100px;
-    background-color: lightgreen;
+    background-color: var(--green);
     border: 1px solid black;
     transform: rotateY(150deg);
+}
+
+.transition {
+    width: 100px;
+    height: 120px;
+    background: var(--green);
+    transition: width 3s;
+}
+
+.transition:hover {
+    width: 500px;
+}
+
+.animation {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: 10;
+    text-align: center;
+}
+
+@keyframes example {
+    0% {
+        background-color: pink;
+        left: 0px;
+        top: 0px;
+    }
+
+    25% {
+        background-color: yellow;
+        left: 200px;
+        top: 0px;
+    }
+
+    50% {
+        background-color: blue;
+        left: 200px;
+        top: 200px;
+    }
+
+    75% {
+        background-color: var(--green);
+        left: 0px;
+        top: 200px;
+    }
+
+    100% {
+        background-color: pink;
+        left: 0px;
+        top: 0px;
+    }
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100%;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.imageStyle {
+    padding: 20px;
+    border: 2px solid green;
+}
+
+#image {
+    border-radius: 50%;
+    -webkit-box-reflect: right 50px;
+    object-fit: cover;
+    object-position: 15% 100%;
+}
+
+.mask1 {
+    max-width: 600px;
+    height: 200px;
+    overflow-y: scroll;
+    background: url(../Images/Training.jpg) no-repeat;
+    -webkit-mask-image: linear-gradient(black, transparent);
+    mask-image: linear-gradient (black, transparent);
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+.pagination a.active {
+    background-color: var(--green);
+    color: white;
+    border: 1px solid var(--green);
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.newspaper {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 1px solid red;
+    width: 750px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    text-align: center;
+}
+
+.flex-item-left {
+    background-color: #f1f1f1;
+    padding: 10px;
+    flex: 33.3%;
+}
+
+.flex-item-center {
+    background-color: var(--green);
+    padding: 10px;
+    flex: 33.3%;
+}
+
+.flex-item-right {
+    background-color: dodgerblue;
+    padding: 10px;
+    flex: 33.3%;
+}
+
+@media (max-width: 800px) {
+
+    .flex-item-right,
+    .flex-item-center,
+    .flex-item-left {
+        flex: 100%;
+    }
 }

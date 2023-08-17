@@ -1,0 +1,195 @@
+$myFont: Helvetica, sans-serif;
+$myColor1: hsl(0, 30%, 50%);
+$myColor: #fff;
+$mybackgroundColor: #333;
+$mycontentBackground: lightgreen;
+$myFontSize: 18px;
+$myWidth: 680px;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: $mybackgroundColor;
+    color: $myColor;
+    padding-top: 20px;
+}
+
+.logo {
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+    border-bottom: 1px solid #555;
+    margin-bottom: 20px;
+}
+
+.menubarSaas {
+    list-style: none;
+    padding: 0;
+}
+
+.menubarSaas li {
+    margin-bottom: 10px;
+}
+
+.menubarSaas a {
+    text-decoration: none;
+    color: $myColor;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.menubarSaas a:hover {
+    background-color: #555;
+}
+
+.content {
+    margin: 20px;
+    width: calc(100% - 250px);
+}
+
+.saasmain {
+    border: 2px solid lightgreen;
+    padding: 20px;
+    color: $myColor1;
+}
+
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+    }
+}
+
+@mixin important-text {
+    color: red;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid $mybackgroundColor;
+    padding: 20px
+}
+
+.danger {
+    @include important-text;
+    background-color: $mycontentBackground;
+}
+
+.button-basic {
+    border: none;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 20px 0 20px 0
+}
+
+.button-report {
+    @extend .button-basic;
+    background-color: red;
+}
+
+.button-submit {
+    @extend .button-basic;
+    background-color: green;
+    color: white;
+}
+
+body,
+h1,
+h2,
+ul,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: $myColor;
+}
+
+header {
+    background-color: $mybackgroundColor;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    padding: 20px 0 20px 0;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.project-list,
+.task-list {
+    flex-basis: 48%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.project-list h2,
+.task-list h2 {
+    margin-bottom: 10px;
+    color: $mybackgroundColor;
+}
+
+.project-list ul,
+.task-list ul {
+    list-style: none;
+}
+
+.project-list ul li,
+.task-list ul li {
+    margin-bottom: 5px;
+}
+
+.project-list ul li a,
+.task-list ul li a {
+    text-decoration: none;
+    color: green;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: $mybackgroundColor;
+    color: white;
+}

@@ -3,44 +3,83 @@
 
 <head>
     <title>CSS Section</title>
-    <link rel="stylesheet" href="../cssModule.css">
+    <link rel="stylesheet" href="./cssResponsive.css">
 </head>
 
 <body>
-    <h1 style="text-align: center;">CSS Section</h1>
+    <div class="container">
 
-    <div class="sidebar">
-        <div class="logo">CSS Modules</div>
-        <ul class="menu">
-            <li><a href="../cssModule.html">CSS Tutorials</a></li>
-            <li><a href="../CSSModules/cssAdvanced.html"> CSS Advanced</a></li>
-            <li><a href="../CSSModules/cssResponsive.html"> CSS Responsive</a></li>
-            <li><a href="../CSSModules/cssGrid.html"> CSS Grid</a></li>
-            <li><a href="../CSSModules/cssSAAS.html"> CSS SAAS</a></li>
-            <li><a href="../index.html"> Return To HOME</a></li>
-        </ul>
-    </div>
+        <div class="sidebar">
+            <div class="logo">CSS Modules</div>
+            <ul class="menubar">
+                <li><a href="../cssModule.html">CSS Tutorials</a></li>
+                <li><a href="../CSSModules/cssAdvanced.html"> CSS Advanced</a></li>
+                <li><a href="../CSSModules/cssResponsive.html"> CSS Responsive</a></li>
+                <li><a href="../CSSModules/cssGrid.html"> CSS Grid</a></li>
+                <li><a href="../CSSModules/cssSAAS.html"> CSS SAAS</a></li>
+                <li><a href="../index.html"> Return To HOME</a></li>
+            </ul>
+        </div>
 
-    <div style="text-align: center;">
-       <h1>CSS ADVANCED</h1>
-    </div>
+        <div class="content">
+            <h1 style="text-align: center;">CSS Responsive Section</h1>
 
-    <!-- <div style="margin-top: 325px;">
-        <header>
-            <h1> Visit Different Sites..</h1>
-            <nav>
-                <ul>
-                    <li><a href="/index.html">HTML Home</a></li>
-                    <li><a href="./form.html">HTML Form Screen</a></li>
-                    <li><a href="./graphics.html">HTML Graphics</a></li>
-                    <li><a href="./media.html">HTML Media</a></li>
-                    <li><a href="./apis.html">HTML APIs</a></li>
-                </ul>
-            </nav>
-        </header>
-    </div> -->
+            <div class="header">
+                <h1>Travel Guide</h1>
+            </div>
 
+            <div class="row">
+                <div class="col-3 col-s-3 menulist">
+                    <ul>
+                        <li>Paris</li>
+                        <li>Rome</li>
+                        <li>Tokyo</li>
+                        <li>New York</li>
+                    </ul>
+                </div>
 
+                <div class="col-6 col-s-9">
+                    <h1>Explore the City</h1>
+                    <p>Discover the vibrant streets and rich history of our chosen destinations. From iconic landmarks
+                        to local cuisine, there's something for everyone.</p>
+                </div>
+
+                <div class="col-6 col-s-9">
+                    <video id="video1" width="400" controls>
+                        <source src="../Images/video.mp4" type="video/mp4">
+                        <source src="../Images/video.mp4" type="video/ogg">
+                        Your browser does not support HTML video.
+                    </video>
+                </div>
+
+                <div class="col-3 col-s-12">
+                    <div class="aside">
+                        <h2>Why?</h2>
+                        <p>Experience the culture and beauty of these amazing cities.</p>
+                        <h2>Where?</h2>
+                        <p>These destinations are spread across different continents.</p>
+                        <h2>How?</h2>
+                        <p>Book your flights and accommodations to embark on your journey.</p>
+                    </div>
+                </div>
+                <div class="col-3 col-s-12">
+                    <div class="aside">
+                        <h2>Explore</h2>
+                        <p>Uncover the hidden gems and local wonders of these enchanting towns.</p>
+                        <h2>Discover</h2>
+                        <p>These captivating destinations offer a blend of history, art, and modernity.</p>
+                        <h2>Plan</h2>
+                        <p>Craft your itinerary, from must-see landmarks to authentic dining experiences.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer">
+                <p>Plan your trip and start your adventure today.</p>
+            </div>
+
+        </div>
 </body>
 
 </html>
