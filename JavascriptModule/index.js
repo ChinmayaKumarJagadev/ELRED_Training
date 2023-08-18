@@ -39,45 +39,60 @@ const person = {
     lastName: "Jagadev",
     id: 5566,
     fullName: function () {
-        return `${this.firstName + " " +this.middleName + ' ' + this.lastName}  and my ID is ${this.id}` ;
+        return `${this.firstName + " " + this.middleName + ' ' + this.lastName}  and my ID is ${this.id}`;
     }
 };
 document.getElementById("jsObject").innerHTML = person.fullName();
 
 
 let text = "Apple, Banana, Kiwi";
-let slice = text.slice(7,13);
-let subStr = text.substring(7,13)
+let slice = text.slice(7, 13);
+let subStr = text.substring(7, 13)
 let upperCase = text.toLocaleUpperCase()
 let search = text.indexOf('Banana')
-document.getElementById("original").innerHTML = text; 
-document.getElementById("slice").innerHTML = slice; 
-document.getElementById("substring").innerHTML = subStr; 
-document.getElementById("uppercase").innerHTML = upperCase; 
-document.getElementById("search").innerHTML = search; 
+document.getElementById("original").innerHTML = text;
+document.getElementById("slice").innerHTML = slice;
+document.getElementById("substring").innerHTML = subStr;
+document.getElementById("uppercase").innerHTML = upperCase;
+document.getElementById("search").innerHTML = search;
 
 
 let fruits = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("originalArray").innerHTML = fruits; 
+document.getElementById("originalArray").innerHTML = fruits;
 
 let pushedArray = fruits.push('PineApple')
-document.getElementById("push").innerHTML = fruits; 
+document.getElementById("push").innerHTML = fruits;
 
 let popArray = fruits.pop()
-document.getElementById("pop").innerHTML = fruits; 
+document.getElementById("pop").innerHTML = fruits;
 
 let shiftArray = fruits.shift()
-document.getElementById("shift").innerHTML = fruits; 
+document.getElementById("shift").innerHTML = fruits;
 
 let lengthArray = fruits.length
-document.getElementById("length").innerHTML = lengthArray; 
+document.getElementById("length").innerHTML = lengthArray;
 
 let sortedArray = fruits.sort()
-document.getElementById("sort").innerHTML = fruits; 
+document.getElementById("sort").innerHTML = fruits;
 
 
-let numbers = [1,5,10, 30, 0, -1];
-const data = numbers.map((i) => i *2)
-document.getElementById("originalArrayMap").innerHTML = numbers; 
-document.getElementById("map").innerHTML = data; 
+let numbers = [1, 5, 10, 30, 0, -1];
+const data = numbers.map((i) => i * 2)
+document.getElementById("originalArrayMap").innerHTML = numbers;
+document.getElementById("map").innerHTML = data;
 
+let date = new Date();
+
+document.getElementById("originaldate").innerHTML = date.toDateString();
+
+document.getElementById("originaldateyear").innerHTML = date.getFullYear();
+
+let setYear = date.setFullYear(2020, 11, 3);
+let setDate = new Date(setYear);
+
+document.getElementById("originaldateyearset").innerHTML = setDate.toDateString();
+
+
+let hello = "";
+hello = (val) => "Hello " + val;
+document.getElementById("arrowfunction").innerHTML = hello("Chinmaya Jagadev!");
