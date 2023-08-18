@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap 5 Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<style>
+    body,
+    html {
+        height: 100%;
+    }
+
+    .sidebar {
+        background-color: #333;
+        color: white;
+        width: 315px;
+        min-height: 100vh;
+    }
+
+    .sidebar-header {
+        background-color: #222;
+        padding: 20px;
+    }
+
+    .sidebar a {
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s;
+    }
+
+    .sidebar a.active {
+        background-color: lightgreen;
+    }
+
+    .bg-lightgreen {
+        background-color: lightgreen;
+    }
+
+    .bg-orange {
+        background-color: #f39c12;
+    }
+
+    .text-lightgreen {
+        color: lightgreen;
+    }
+
+    .rounded-10 {
+        border-radius: 10px;
+    }
+
+    .colored-border {
+        border-color: #f39c12;
+    }
+
+    .form-container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h3 {
+        margin-bottom: 20px;
+    }
+
+    .form-container label {
+        font-weight: bold;
+    }
+
+    .form-container input[type="text"],
+    .form-container input[type="email"],
+    .form-container input[type="password"],
+    .form-container input[type="date"],
+    .form-container select,
+    .form-container textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form-container input[type="file"] {
+        display: none;
+    }
+
+    .form-container .custom-file-label {
+        cursor: pointer;
+    }
+
+    .form-container .custom-file-label::after {
+        content: "Browse";
+    }
+
+    .form-container button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: lightgreen;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
+
+
+<body>
+    <div class="d-flex">
+
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>Bootstrap</h2>
+            </div>
+
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="./bootstrapTutorial.html">Tutorial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./bootstrapForm.html">Form</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./bootstrapGrid.html">Grid</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Return to HTML</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="flex-grow-1">
+            <div class="container-fluid p-5 bg-primary text-white text-center border border-success rounded-sqaure">
+                <h1>My First Bootstrap Form Page</h1>
+                <p>Resize this responsive page to see the effect!</p>
+            </div>
+
+            <div>
+                <h1 style="text-align: center;">A Form Creation and Manage</h1>
+                <div class="container mt-5">
+                    <div class="form-container">
+                        <h3 class="text-center">Sample Form</h3>
+                        <form id="myForm" action="/action_page.php" target="_blank" method="get" class="was-validated"
+                            novalidate>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                            <div class="invalid-feedback">Please provide a valid email.</div>
+
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" class="form-control" required>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+
+                            <label for="gender">Gender:</label>
+                            <div class="d-flex mt-2">
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="radio1" name="gender" value="male"
+                                        required>
+                                    <label class="form-check-label" for="radio1">Male</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="radio2" name="gender"
+                                        value="female" required>
+                                    <label class="form-check-label" for="radio2">Female</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" class="form-check-input" id="radio3" name="gender" value="other"
+                                        required>
+                                    <label class="form-check-label" for="radio3">Other</label>
+                                </div>
+                            </div>
+
+                            <label class="mt-3">Hobbies:</label>
+                            <div class="d-flex mt-2">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input" id="check1" name="hobbies[]"
+                                        value="reading" required>
+                                    <label class="form-check-label" for="check1">Reading</label>
+                                </div>
+                                <div class="form-check ml-3">
+                                    <input type="checkbox" class="form-check-input" id="check2" name="hobbies[]"
+                                        value="sports" required>
+                                    <label class="form-check-label" for="check2">Sports</label>
+                                </div>
+                                <div class="form-check ml-3">
+                                    <input type="checkbox" class="form-check-input" id="check3" name="hobbies[]"
+                                        value="technology" required>
+                                    <label class="form-check-label" for="check3">Technology</label>
+                                </div>
+                            </div>
+
+                            <label for="country" class="mt-3">Country:</label>
+                            <select class="form-select mt-2" id="country" name="country" required>
+                                <option value="">Select country</option>
+                                <option value="usa">USA</option>
+                                <option value="canada">Canada</option>
+                                <option value="uk">UK</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a country.</div>
+
+                            <label for="birthdate" class="mt-3">Birthdate:</label>
+                            <input type="date" id="birthdate" name="birthdate" class="form-control" required>
+                            <div class="invalid-feedback">Please provide a valid birthdate.</div>
+
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
+                            <div class="invalid-feedback">Please fill out this field.</div>
+
+                            <button type="submit" class="btn btn-success mt-5">Submit</button>
+                        </form>
+                    </div>
+                </div>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        const form = document.getElementById('myForm');
+
+                        form.addEventListener('submit', function (event) {
+                            event.preventDefault();
+
+                            const formData = {
+                                name: form.name.value,
+                                email: form.email.value,
+                                password: form.password.value,
+                                gender: form.gender.value,
+                                hobbies: Array.from(form.querySelectorAll('input[name="hobbies[]"]:checked')).map(hobby => hobby.value),
+                                country: form.country.value,
+                                birthdate: form.birthdate.value,
+                                message: form.message.value
+                            };
+
+                            console.log(formData);
+                        });
+                    });
+                </script>
+            </div>
+
+            <footer class="bg-orange text-white text-center py-4">
+                <div class="container">
+                    <p>&copy; 2023 Your Company. All rights reserved.</p>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+</body>
+
+</html>

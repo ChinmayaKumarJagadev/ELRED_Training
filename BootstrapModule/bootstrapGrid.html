@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap 5 Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<style>
+    body,
+    html {
+        height: 100%;
+    }
+
+    .sidebar {
+        background-color: #333;
+        color: white;
+        width: 315px;
+        min-height: 100vh;
+    }
+
+    .sidebar-header {
+        background-color: #222;
+        padding: 20px;
+    }
+
+    .sidebar a {
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s;
+    }
+
+    .sidebar a.active {
+        background-color: lightgreen;
+    }
+
+    .bg-lightgreen {
+        background-color: lightgreen;
+    }
+
+    .text-lightgreen {
+        color: lightgreen;
+    }
+
+    .rounded-10 {
+        border-radius: 10px;
+    }
+
+    .colored-border {
+        border-color: #f39c12;
+    }
+    .bg-orange {
+        background-color: #f39c12;
+    }
+</style>
+
+
+<body>
+    <div class="d-flex">
+
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>Bootstrap</h2>
+            </div>
+
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="./bootstrapTutorial.html">Tutorial</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="./bootstrapForm.html">Form</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="./bootstrapGrid.html">Grid</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Return to HTML</a>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="flex-grow-1">
+            <div class="container-fluid p-5 bg-lightgreen text-white text-center border border-success rounded-sqaure">
+                <h1>My First Bootstrap Grid Page</h1>
+                <p>Resize this responsive page to see the effect!</p>
+            </div>
+
+            <div class="mt-5">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm bg-lightgreen text-white p-3">1 of 4</div>
+                        <div class="col-sm bg-dark text-white p-3">2 of 4</div>
+                        <div class="col-sm bg-lightgreen text-white p-3">3 of 4</div>
+                        <div class="col-sm bg-dark text-white p-3">4 of 4</div>
+                    </div>
+                </div>
+
+                <div class="container-fluid mt-5">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="bg-primary text-white p-3">
+                                <h2>Column 1</h2>
+                                <p>This is a sample content for column 1.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="bg-lightgreen text-white p-3">
+                                <h2>Column 2</h2>
+                                <p>This is a sample content for column 2.</p>
+                                <button class="btn btn-light">Click Me</button>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="bg-info text-white p-3">
+                                <h2>Column 3</h2>
+                                <ul>
+                                    <li>List item 1</li>
+                                    <li>List item 2</li>
+                                    <li>List item 3</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row mt-4">
+                        <div class="col-lg-8">
+                            <div class="bg-warning p-3">
+                                <h2>Wide Column</h2>
+                                <p>This column occupies 8 out of 12 columns on large screens.</p>
+                                <p>It's perfect for displaying larger content or forms.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="bg-danger p-3">
+                                <h2>Narrow Column</h2>
+                                <p>This column occupies 4 out of 12 columns on large screens.</p>
+                                <p>It's suitable for displaying smaller content or sidebars.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container-fluid border-success rounded-10 mt-5 mb-5 p-5 border">
+                        <div class="row">
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xxl-5">
+                                <div class="bg-primary text-white p-3">
+                                    <h2>Grid System</h2>
+                                    <p>This is content for Grid 1.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2 col-xl-1">
+                                <div class="bg-secondary text-white p-3">
+                                    <h2>Grid System 2</h2>
+                                    <p>This is content for Grid 1=2.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <footer class="bg-orange text-white text-center py-4">
+                <div class="container">
+                    <p>&copy; 2023 Your Company. All rights reserved.</p>
+                </div>
+            </footer>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
