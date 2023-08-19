@@ -20,6 +20,22 @@
         .margin-20 {
             margin: 0 5rem 0 5rem
         }
+
+        #container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background: lightgreen;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        #animate {
+            width: 250px;
+            height: 250px;
+            position: absolute;
+            background: yellow;
+        }
     </style>
 
 
@@ -163,6 +179,231 @@
             <p>This example shows an Arrow Function with a parameter.</p>
 
             <p id="arrowfunction"></p>
+        </div>
+
+        <div>
+            <h2>JavaScript Functions</h2>
+            <p>Functions can be treated as values:</p>
+            <p>x = myFunction(4,4) or x = 16</p>
+            <p>In both cases, x becomes a number with the value of 16.</p>
+            <p id="functions"></p>
+        </div>
+
+        <div>
+            <h3>JavaScript call Function</h3>
+            <p>This example calls the fullName method of person, using it on person1:
+            </p>
+
+            <p id="callfun"></p>
+        </div>
+
+        <div>
+            <h3>JavaScript Apply Function</h3>
+            <p>This example calls the fullName method of person, using it on person1:
+            </p>
+
+            <p id="applyfun"></p>
+        </div>
+
+        <div>
+            <h3>JavaScript Function bind()</h3>
+
+            <p>This example creates 2 objects (person and member).</p>
+            <p>The member object borrows the fullname method from person:</p>
+
+            <p id="bindfun"></p>
+        </div>
+
+        <div>
+            <h2>JavaScript Object Properties</h2>
+            <p>Access a property with ["property"]:</p>
+            <p id="object"></p>
+        </div>
+
+        <div>
+            <h3>JavaScript Object Properties</h3>
+            <p>Add a new property to an existing object:</p>
+
+            <p id="insertObject"></p>
+        </div>
+
+        <div>
+            <h3>JavaScript Objects</h3>
+            <p>Access nested objects:</p>
+
+            <p id="nestedObj"></p>
+        </div>
+
+        <div>
+            <h3>JavaScript Objects</h3>
+            <p>Display properties in JSON format:</p>
+            <p id="stringify"></p>
+        </div>
+        <div>
+            <h3>JavaScript Object Constructors</h3>
+
+            <p id="constructors"></p>
+        </div>
+
+        <div>
+            <h2>JavaScript Sets</h2>
+            <p>Adding equal elements to a Set:</p>
+
+            <p id="sets"></p>
+        </div>
+
+        <div>
+            <h2>JavaScript Map Objects</h2>
+            <p>Using Map.set():</p>
+
+            <p id="mapObj"></p>
+        </div>
+
+        <div>
+            <h2>JavaScript Object.keys()</h2>
+            <p>This example list the enumerable properties of an object.</p>
+
+            <p id="key"></p>
+        </div>
+
+        <div class="mt-5">
+            <h1>JavaScript Classes</h1>
+            <p>Creating two car objects from a car class:</p>
+
+            <p id="classes"></p>
+        </div>
+
+        <div>
+            <h1>JavaScript Async callback</h1>
+            <h2>Function Sequence</h2>
+            <p>JavaScript functions are executed in the sequence they are called.</p>
+
+            <p>The result of the calculation is:</p>
+            <p id="async"></p>
+        </div>
+
+        <div>
+            <h1>JavaScript Asychronous Function</h1>
+            <h2>setInterval() with a Callback</h2>
+
+            <p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+
+            <h4 id="callback"></h4>
+        </div>
+
+        <div>
+            <h2>JavaScript Promise</h2>
+            <p id="promise"></p>
+        </div>
+
+        <div>
+            <h2>JavaScript async / await</h2>
+            <p id="asyncAwait"></p>
+        </div>
+
+        <div class="mt-5">
+            <h2>JavaScript HTML DOM</h2>
+
+            <span>Finding HTML Elements by Tag Name.</span><br>
+            <span>This example demonstrates the <b>getElementsByTagName</b> method.</span>
+            <p id="dom"></p>
+        </div>
+
+        <div>
+            <h2>JavaScript Validation</h2>
+
+            <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+                Name: <input type="text" name="fname">
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+        <div class="mt-5">
+            <h1 id="id1">My color is changing using HTML DOM</h1>
+
+            <button type="button" onclick="document.getElementById('id1').style.color = 'lightgreen'">
+                Click Me to change my color!</button>
+        </div>
+
+        <h2 class="mt-5">My First JavaScript Animation</h2>
+
+        <div id="container">
+            <div id="animate"></div>
+        </div>
+
+        <div class="mt-5">
+            <p>Mouse Hover on me</p>
+            <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+                style="background-color: lightgreen;width:250px;height:20px;padding:40px; margin: 0 auto;">
+                Mouse Over Me</div>
+        </div>
+
+
+        <div class="mt-5">
+            <h1>Javascript BOM</h1>
+            <p id="bom"></p>
+            <p id="location"></p>
+            <br>
+            <p>Click me to back from the current screen</p>
+            <input type="button" value="Back" onclick="goBack()">
+        </div>
+
+        <div>
+            <h2>JavaScript Confirm Box</h2>
+            <button onclick="myFunction()">This is a alert Box</button>
+            <p id="alert"></p>
+        </div>
+
+        <div class="mt-5">
+            <h2>JavaScript WEB API</h2>
+            <h5>JavaScript Validation</h5>
+            <p>Enter a number and click OK:</p>
+
+            <input id="idApi" type="number" max="100">
+            <button onclick="myFunction()">OK</button>
+
+            <p>If the number is greater than 100 (the input's max attribute), an error message will be displayed.</p>
+
+            <p id="api"></p>
+
+            <h3>JavaScript History API</h3>
+            <button class="mt-3" onclick="myFunctionGo()">Go Back 2 Pages</button>
+
+            <h3 class="mt-3">JavaScript Storage API</h3>
+            <p id="session"></p>
+        </div>
+
+        <div>
+            <h2>JavaScript Web Workers Fetch</h2>
+            <p id="fetch">Fetch a file to change this text.</p>
+        </div>
+
+        <div>
+            <h2>The XMLHttpRequest Object</h2>
+            <button type="button" onclick="loadDoc()">Request data</button>
+            <p id="ajax"></p>
+        </div>
+
+        <div class="mt-5">
+            <h2>JSON Module in Javascript</h2>
+            <p id="json"></p>
+        </div>
+
+        <div>
+            <h5>Original Array is: </h5>
+            <p> [ "Ford", "BMW", "Audi", "Fiat" ] </p>
+
+            <h5 class="mt-3">Parsing a JSON Array of [0] index.</h5>
+            <p>Data written as an JSON array will be parsed into a JavaScript array.</p>
+            <p id="parse" class="text-success"></p>
+
+
+        </div>
+
+        <div>
+            <h5 class="mt-3">Stringify the whole JSON.</h5>
+            <p>Create a JSON string from a JavaScript object.</p>
+            <p id="str" class="text-danger"></p>
         </div>
 
         <div>
